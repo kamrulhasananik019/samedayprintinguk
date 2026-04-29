@@ -5,21 +5,21 @@ import { getNavCategories } from '@/lib/catalog';
 import { getCategoryPath } from '@/lib/slug';
 import { getSafeImageSrc } from '@/lib/image-url';
 import { richContentToPlainText } from '@/lib/rich-content';
-import { siteUrl } from '@/lib/site';
+import { siteName, siteSeoDescription, siteUrl } from '@/lib/site';
 
 export const revalidate = 604800;
 
 export const metadata: Metadata = {
-  title: 'All Categories | Prime Prints',
-  description: 'Explore every print category at Prime Prints and open a category page to see the products inside it.',
+  title: 'All Categories | Samedayprintinguk',
+  description: siteSeoDescription,
   alternates: {
     canonical: '/categories',
   },
   openGraph: {
-    title: 'All Categories | Prime Prints',
-    description: 'Explore every print category and jump into the matching product lists.',
+    title: 'All Categories | Samedayprintinguk',
+    description: siteSeoDescription,
     url: '/categories',
-    siteName: 'Prime Prints',
+    siteName,
     type: 'website',
   },
 };

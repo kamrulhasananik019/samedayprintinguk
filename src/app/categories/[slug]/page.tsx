@@ -12,7 +12,7 @@ import { getPrimaryImage } from '@/lib/product-media';
 import RichContent from '@/components/shared/rich-content';
 import { richContentToPlainText } from '@/lib/rich-content';
 import { getCategoryPath, getProductPath, toSlug } from '@/lib/slug';
-import { siteUrl } from '@/lib/site';
+import { siteName, siteUrl } from '@/lib/site';
 
 /** First visit generates the page; long ISR window limits background regeneration writes. Must be a literal for Next segment config (see `CATALOG_PAGE_REVALIDATE_SECONDS`). */
 export const revalidate = 604800;
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: seoTitle,
       description: seoDescription,
       url: canonicalPath,
-      siteName: 'Prime Prints',
+      siteName,
       images: [{ url: seoImage, alt: category.image.alt || category.name }],
       type: 'website',
     },

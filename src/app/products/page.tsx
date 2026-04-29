@@ -6,22 +6,22 @@ import { getProductPath } from '@/lib/slug';
 import { getPrimaryImage } from '@/lib/product-media';
 import { getSafeImageSrc } from '@/lib/image-url';
 import { richContentToPlainText } from '@/lib/rich-content';
-import { siteUrl } from '@/lib/site';
+import { siteName, siteSeoDescription, siteUrl } from '@/lib/site';
 
 export const revalidate = 604800;
 
 export const metadata: Metadata = {
-  title: 'All Products | Prime Prints',
+  title: 'All Products | Samedayprintinguk',
   description:
-    'Browse the full Prime Prints product range, from business cards and flyers to banners, posters, and custom print work.',
+    siteSeoDescription,
   alternates: {
     canonical: '/products',
   },
   openGraph: {
-    title: 'All Products | Prime Prints',
-    description: 'Browse the full Prime Prints product range and jump into any product detail page.',
+    title: 'All Products | Samedayprintinguk',
+    description: siteSeoDescription,
     url: '/products',
-    siteName: 'Prime Prints',
+    siteName,
     type: 'website',
   },
 };

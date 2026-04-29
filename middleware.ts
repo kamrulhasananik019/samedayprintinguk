@@ -20,8 +20,8 @@ function getAllowedOrigins(): Set<string> {
     .filter((value): value is string => Boolean(value));
 
   const origins = new Set<string>([
-    'https://www.primeprint.uk',
-    'https://primeprint.uk',
+    'https://samedayprintinguk.co.uk',
+    'https://www.samedayprintinguk.co.uk',
     ...(siteOrigin ? [siteOrigin] : []),
     ...extraOrigins,
   ]);

@@ -1,32 +1,30 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ReviewsPanel from '@/components/reviews/reviews-panel';
-import { siteUrl } from '@/lib/site';
+import { siteName, siteSeoDescription, siteUrl } from '@/lib/site';
 import { getApprovedReviews } from '@/services/review.service';
 
 /** Cache reviews page for 1 week; invalidated only by admin review changes via revalidateTag('reviews') */
 export const revalidate = 604800;
 
 export const metadata: Metadata = {
-  title: 'Customer Reviews | Prime Prints',
+  title: 'Customer Reviews | Samedayprintinguk',
   description:
-    'Read what our customers say about Prime Prints printing services, quality, delivery, and customer support.',
+    siteSeoDescription,
   alternates: {
     canonical: '/reviews',
   },
   openGraph: {
-    title: 'Customer Reviews | Prime Prints',
-    description:
-      'Discover customer testimonials and ratings for Prime Prints printing services.',
+    title: 'Customer Reviews | Samedayprintinguk',
+    description: siteSeoDescription,
     url: '/reviews',
     type: 'website',
-    siteName: 'Prime Prints',
+    siteName,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Customer Reviews | Prime Prints',
-    description:
-      'See what customers say about our printing quality and service.',
+    title: 'Customer Reviews | Samedayprintinguk',
+    description: siteSeoDescription,
   },
 };
 
@@ -45,7 +43,7 @@ export default async function ReviewsPage() {
   const reviewsJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Prime Prints',
+    name: siteName,
     url: siteUrl,
     ...(aggregateRating && { aggregateRating }),
     review: reviews.slice(0, 10).map((review) => ({
@@ -81,7 +79,7 @@ export default async function ReviewsPage() {
             Customer Reviews
           </h1>
           <p className="mt-4 text-base leading-relaxed text-stone-600">
-            Read what our customers say about Prime Prints printing quality, delivery, and service.
+            Read what our customers say about Samedayprintinguk printing quality, delivery, and service.
           </p>
           {reviews.length > 0 && (
             <div className="mt-6 flex items-center gap-3">
@@ -112,7 +110,7 @@ export default async function ReviewsPage() {
         <div className="mt-16 rounded-2xl border border-stone-200 bg-white p-8 text-center md:p-10">
           <h2 className="font-serif text-2xl font-bold text-stone-900">Share your experience</h2>
           <p className="mt-3 text-sm text-stone-600">
-            Have you used Prime Prints? We&apos;d love to hear about your experience.
+            Have you used Samedayprintinguk? We&apos;d love to hear about your experience.
           </p>
           <Link
             href="/contact"

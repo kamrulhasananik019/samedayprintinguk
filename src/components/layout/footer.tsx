@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { siteName } from '@/lib/site';
 
 export default function Footer() {
   return (
@@ -10,13 +11,13 @@ export default function Footer() {
               <Link href="/" prefetch={false} className="my-2 flex items-center">
                 <Image
                   src="/logo.png"
-                  alt="PrimePrint"
+                  alt={siteName}
                   width={400}
                   height={120}
                   className="h-10 w-auto object-contain"
                 />
             </Link>
-            {/* <p className="mb-3 text-xs uppercase tracking-[0.22em] text-[#D2C1B6]/70">Prime Prints</p> */}
+            {/* <p className="mb-3 text-xs uppercase tracking-[0.22em] text-[#D2C1B6]/70">Samedayprintinguk</p> */}
             <h3 className="mb-3 text-2xl font-black text-[#F4EFEB] [font-family:var(--font-playfair-display)]">
               Bring your ideas to print
             </h3>
@@ -60,7 +61,7 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-2 border-t border-[#234C6A]/70 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-[#D2C1B6]/65 [font-family:var(--font-dm-sans)]">
-            {new Date().getFullYear()} Prime Prints. All rights reserved.
+            {new Date().getFullYear()} {siteName}. All rights reserved.
           </p>
           <p className="text-xs text-[#D2C1B6]/65 [font-family:var(--font-dm-sans)]">
             Crafted for premium printing experiences.

@@ -19,6 +19,7 @@ import type { NavCategory } from '@/lib/catalog';
 import { richContentToPlainText } from '@/lib/rich-content';
 import { getCategoryPath, getProductPath } from '@/lib/slug';
 import { getSafeImageSrc } from '@/lib/image-url';
+import { siteName } from '@/lib/site';
 
 type NavbarProps = {
   categories: NavCategory[];
@@ -221,7 +222,7 @@ export default function Navbar({ categories }: NavbarProps) {
             <Link href="/" prefetch={false} className="flex items-center ps-3">
               <Image
                 src="/logo.png"
-                alt="PrimePrint"
+                alt={siteName}
                 width={400}
                 height={120}
                 priority
@@ -427,7 +428,7 @@ export default function Navbar({ categories }: NavbarProps) {
              <Link href="/" prefetch={false} className="flex items-center">
               <Image
                 src="/logo.png"
-                alt="PrimePrint"
+                alt={siteName}
                 width={400}
                 height={120}
                 priority

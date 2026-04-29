@@ -2,30 +2,30 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import FaqAccordion from '@/components/shared/faq-accordion';
 import { getFaqs } from '@/services/faq.service';
+import { siteName, siteSeoDescription } from '@/lib/site';
 
 /** Cache FAQ page for 1 week; invalidated only by admin FAQ changes via revalidateTag('faqs') */
 export const revalidate = 604800;
 
 export const metadata: Metadata = {
-  title: 'FAQs | Prime Prints',
+  title: 'FAQs | Samedayprintinguk',
   description:
-    'Find answers to frequently asked questions about Prime Prints services, turnaround times, delivery, and custom printing options.',
+    'Find answers to frequently asked questions about Samedayprintinguk services, turnaround times, delivery, and custom printing options.',
   alternates: {
     canonical: '/faqs',
   },
   openGraph: {
-    title: 'Frequently Asked Questions | Prime Prints',
-    description:
-      'Get answers about printing services, delivery options, and custom orders at Prime Prints.',
+    title: 'Frequently Asked Questions | Samedayprintinguk',
+    description: siteSeoDescription,
     url: '/faqs',
     type: 'website',
-    siteName: 'Prime Prints',
+    siteName,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FAQs | Prime Prints',
+    title: 'FAQs | Samedayprintinguk',
     description:
-      'Find answers to common questions about Prime Prints printing services.',
+      'Find answers to common questions about Samedayprintinguk printing services.',
   },
 };
 

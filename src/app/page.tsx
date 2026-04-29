@@ -11,6 +11,7 @@ import Reviews from "@/components/Home/reviews";
 import InfiniteMarquee from "@/components/shared/infinite-marquee";
 import { getCategories } from "@/services/category.service";
 import { getProductCategoryTitleMap, getSameDayPrinting } from "@/services/product.service";
+import { siteName, siteSeoDescription } from "@/lib/site";
 
 const CategorySlider = nextDynamic(() => import("@/components/Home/categoryslider"), {
   loading: () => <HomeDeferredFallback minHeight="min-h-[420px]" />,
@@ -24,33 +25,30 @@ const SameDayPrinting = nextDynamic(() => import("@/components/Home/samedaydeliv
 export const revalidate = 604800;
 
 export const metadata: Metadata = {
-  title: "Prime Prints | Same Day Delivery Printing in London & UK",
-  description:
-    "Prime Prints offers same day delivery in London and across the UK with 24-hour delivery for business cards, flyers, posters, banners, and custom print products.",
+  title: "Samedayprintinguk | Same Day Delivery Printing in London & UK",
+  description: siteSeoDescription,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Prime Prints | Same Day Delivery Printing in London & UK",
-    description:
-      "Same-day delivery printing in London and across the UK for business cards, flyers, posters, banners, and custom print jobs.",
+    title: "Samedayprintinguk | Same Day Delivery Printing in London & UK",
+    description: siteSeoDescription,
     url: "/",
     type: "website",
-    siteName: "Prime Prints",
+    siteName,
     images: [
       {
         url: "/logo.png",
         width: 512,
         height: 512,
-        alt: "Prime Prints same day delivery printing",
+        alt: "Samedayprintinguk same day delivery printing",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prime Prints | Same Day Delivery Printing in London & UK",
-    description:
-      "Same-day delivery printing for London and UK businesses with fast turnaround.",
+    title: "Samedayprintinguk | Same Day Delivery Printing in London & UK",
+    description: siteSeoDescription,
     images: ["/logo.png"],
   },
 };

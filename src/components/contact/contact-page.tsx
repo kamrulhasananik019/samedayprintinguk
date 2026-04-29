@@ -16,7 +16,7 @@ import {
   Send,
 } from "lucide-react";
 import type { CategoryWithProducts } from "@/lib/catalog";
-import { siteAddressLabel, siteGoogleMapsEmbedUrl, siteGoogleMapsPlaceUrl } from "@/lib/site";
+import { siteAddressLabel, siteGoogleMapsEmbedUrl, siteGoogleMapsPlaceUrl, siteName } from "@/lib/site";
 
 const CUSTOM_CATEGORY_VALUE = "__custom_category__";
 const CUSTOM_PRODUCT_VALUE = "__custom_product__";
@@ -229,7 +229,7 @@ export default function ContactPageContent({ categories }: ContactPageContentPro
                 Client Support Desk
               </p>
               <h1 className="text-4xl font-bold tracking-tight text-stone-900 sm:text-5xl">
-                Contact Prime Prints
+                Contact {siteName}
               </h1>
               <p className="mt-4 text-lg leading-8 text-stone-600">
                 Speak to a print team that understands deadlines, details, and delivery.

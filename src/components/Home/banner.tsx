@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import { siteName } from '@/lib/site';
 
 interface Slide {
   image: string;
@@ -20,7 +21,7 @@ const slides: Slide[] = [
     image: '/banner/prime-hero.webp',
     tag: 'First Order Discount',
     headline: ['First Order', 'Discount', 'Available Now'],
-    sub: 'New to Prime Print? Enjoy an exclusive discount on your very first order with premium quality and unbeatable price.',
+    sub: `New to ${siteName}? Enjoy an exclusive discount on your very first order with premium quality and unbeatable price.`,
     cta: 'Claim Your Discount',
     accent: '#FF5733',
     href: '/categories/deals-and-discounts',

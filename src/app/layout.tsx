@@ -5,7 +5,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import AppQueryProvider from "@/components/providers/query-provider";
 import { getNavCategories } from "@/lib/catalog";
-import { siteAddress, siteUrl } from "@/lib/site";
+import { siteAddress, siteName, siteSeoDescription, siteUrl } from "@/lib/site";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -34,7 +34,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  applicationName: "Prime Prints",
+  applicationName: siteName,
   icons: {
     icon: [
       { url: "/icon/favicon.ico" },
@@ -47,11 +47,10 @@ export const metadata: Metadata = {
     shortcut: ["/icon/favicon.ico"],
   },
   title: {
-    default: "Prime Prints | Same Day Delivery Printing in London & UK",
-    template: "%s | Prime Prints",
+    default: "Samedayprintinguk | Same Day Delivery Printing in London & UK",
+    template: "%s | Samedayprintinguk",
   },
-  description:
-    "Prime Prints delivers premium same-day printing in London for business, events, and custom orders.",
+  description: siteSeoDescription,
   keywords: [
     "same day printing",
     "printing london",
@@ -64,11 +63,10 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Prime Prints | Same Day Delivery Printing in UK",
-    description:
-      "Prime Prints provides same-day delivery printing in London and across the UK for business cards, flyers, posters, banners, and more.",
+    title: "Samedayprintinguk | Same Day Delivery Printing in UK",
+    description: siteSeoDescription,
     url: "/",
-    siteName: "Prime Prints",
+    siteName,
     locale: "en_GB",
     type: "website",
     images: [
@@ -76,15 +74,14 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 512,
         height: 512,
-        alt: "Prime Prints logo",
+        alt: "Samedayprintinguk logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prime Prints | Same Day Delivery Printing in UK",
-    description:
-      "Prime Prints provides same-day delivery printing in London and across the UK.",
+    title: "Samedayprintinguk | Same Day Delivery Printing in UK",
+    description: siteSeoDescription,
     images: ["/logo.png"],
   },
   robots: {
@@ -96,10 +93,9 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "PrintShop",
-  name: "Prime Prints",
+  name: siteName,
   url: siteUrl,
-  description:
-    "Same-day and premium printing in London for business cards, flyers, posters, banners, and custom orders.",
+  description: siteSeoDescription,
   areaServed: { "@type": "City", name: "London" },
   address: {
     "@type": "PostalAddress",
