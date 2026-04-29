@@ -1,7 +1,11 @@
 import { MongoClient } from 'mongodb';
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://samedayprintinguk:Pr1me%40Pr1nt@cluster0.vmve3bx.mongodb.net/?appName=Cluster0';
+const MONGODB_URI = process.env.MONGODB_URI;
 const DB_NAME = 'samedayprintinguk';
+
+if (!MONGODB_URI) {
+  throw new Error('Missing MONGODB_URI environment variable.');
+}
 
 const client = new MongoClient(MONGODB_URI);
 

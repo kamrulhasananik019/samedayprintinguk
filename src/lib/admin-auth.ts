@@ -79,6 +79,5 @@ export function verifyPasswordAgainstHash(password: string, storedHash: string):
   const normalized = storedHash.trim();
   if (!normalized) return false;
 
-  // Simple plain-text password comparison
   return safeEqualString(password, normalized);
 }
