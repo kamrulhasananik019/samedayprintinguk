@@ -26,7 +26,7 @@ CLOUDFLARE_R2_BUCKET_NAME=<r2-bucket-name>
 Optional:
 
 ```dotenv
-MONGODB_DB_NAME=primeprints
+MONGODB_DB_NAME=samedayprintinguk
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 # Dev-only TLS fallbacks (only if your machine has SSL cert issues)
 # MONGODB_TLS_INSECURE=true

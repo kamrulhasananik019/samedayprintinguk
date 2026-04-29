@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "seed": "node scripts/seed-db.mjs",
+    "create-admin": "node scripts/create-admin.mjs",
     "seed:mongodb": "node scripts/seed-mongodb.mjs"
   },
   "dependencies": {
